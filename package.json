@@ -1,6 +1,6 @@
 {
   "name": "lkt-vuex-tools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "keywords": [
     "lkt",
@@ -19,14 +19,15 @@
       "import": "./dist/build.js"
     }
   },
-  "types": "./dist/index.d.ts",
+  "types": "./dist/build.d.ts",
   "files": [
     "dist/*"
   ],
   "license": "MIT",
   "sideEffects": false,
   "scripts": {
-    "build": "rm -rf dist/*; vue-tsc --declaration --emitDeclarationOnly; vite build; tsc --project tsconfig.build.json; cp build/* dist/"
+    "build": "vue-tsc --declaration --emitDeclarationOnly; vite build; tsc --project tsconfig.build.json; cp build/* dist/",
+    "rebuild": "rm -rf dist/*; vue-tsc --declaration --emitDeclarationOnly; vite build; tsc --project tsconfig.build.json; cp build/* dist/"
   },
   "author": "Antonio Ibáñez",
   "devDependencies": {
@@ -43,8 +44,6 @@
     "node": ">=18"
   },
   "dependencies": {
-    "lkt-loader": "^1.0.0",
-    "lkt-paginator": "^1.0.4",
     "lkt-ts-interfaces": "^1.0.5",
     "process": "^0.11.10",
     "sass": "^1.57.1",

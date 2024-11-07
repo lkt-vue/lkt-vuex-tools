@@ -13,7 +13,7 @@ export default {
     build: {
         lib: {
             entry: `${ src }/index.ts`,
-            name: 'LktTablePage',
+            name: 'LktVuexTools',
             fileName: 'build',
             formats: ['es']
         },
@@ -22,6 +22,7 @@ export default {
         rollupOptions: {
             external: [
                 'vue',
+                'vuex',
                 'lkt-tools',
                 'lkt-events',
                 'lkt-button',
