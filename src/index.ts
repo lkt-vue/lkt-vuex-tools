@@ -1,4 +1,4 @@
-import {LktObject} from "lkt-ts-interfaces";
+import {LktObject} from "lkt-vue-kernel";
 import {reactive, UnwrapNestedRefs} from "vue";
 //@ts-ignore
 import {createStore} from "vuex";
